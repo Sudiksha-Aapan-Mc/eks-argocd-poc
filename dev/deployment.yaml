@@ -14,6 +14,8 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: nanajanashia/argocd-app:1.2
+        image: 920694399312.dkr.ecr.us-west-2.amazonaws.com/primuslearning
         ports:
         - containerPort: 8080
+      imagePullSecrets:
+          - name: regcred
