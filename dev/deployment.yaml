@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: poc-app
+  labels:
+    app: poc-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: poc-app
+  template:
+    metadata:
+      labels:
+        app: poc-app
+    spec:
+      containers:
+        - name: poc-app
+          image: 274127640471.dkr.ecr.us-east-2.amazonaws.com/primuslearning:1.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
