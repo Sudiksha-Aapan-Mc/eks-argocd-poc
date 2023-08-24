@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: poc-app
-          image: 920694399312.dkr.ecr.us-west-2.amazonaws.com/primuslearning
+          image: 920694399312.dkr.ecr.us-west-2.amazonaws.com/primuslearning:1.1
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
